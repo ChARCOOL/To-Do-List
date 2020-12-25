@@ -1,0 +1,145 @@
+$color-pastel-blue: #78a2cc;
+$color-pastel-green: #77dd77;
+$color-pastel-red: #ff6961;
+$color-pastel-grey: #8e8e8e;
+$color-background: #f5f5f5;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 5vw;
+  font-family: "Segoe Alt", sans-serif;
+  background-color: $color-background;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  &__head {
+    margin-top: 5vh;
+    h3 {
+      margin-top: 0.75vh;
+      font-weight: normal;
+      color: $color-pastel-grey;
+    }
+  }
+  &__add {
+    margin-top: 2.5vh;
+    &--input {
+      padding: 0.5vh 1.5vw;
+      border: 1px solid $color-pastel-grey;
+    }
+    &--submit {
+      cursor: pointer;
+      color: white;
+      background-color: $color-pastel-blue;
+      padding: 1vh 5vw;
+      margin-left: 1vw;
+      border-radius: 5em;
+      border: none;
+      outline: none;
+      &:hover {
+        transition: all 0.15s linear;
+        transform: scale(1.05);
+        box-shadow: 5px 10px 8px -2px $color-pastel-grey;
+      }
+      &:active {
+        transition: all 0.05s linear;
+        transform: scale(0.95);
+      }
+    }
+  }
+  &__list {
+    margin: 3vh 0;
+    &--items {
+      text-align: left;
+      li {
+        padding-left: 0.75vw;
+      }
+    }
+  }
+  &__button {
+    &--items {
+      display: flex;
+      list-style: none;
+      #clear {
+        background-color: $color-pastel-blue;
+      }
+      #empty {
+        margin: 0 5vw;
+        background-color: $color-pastel-red;
+      }
+      #save {
+        background-color: $color-pastel-green;
+      }
+      button {
+        cursor: pointer;
+        color: white;
+        padding: 1vh 4.5vw;
+        border-radius: 5em;
+        border: none;
+        outline: none;
+        &:hover {
+          transition: all 0.15s linear;
+          transform: scale(1.05);
+          box-shadow: 5px 10px 8px -2px $color-pastel-grey;
+        }
+        &:active {
+          transition: all 0.05s linear;
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1600px) {
+  body {
+    font-size: 2vw;
+  }
+  .container {
+    &__head {
+      h3 {
+      }
+    }
+    &__add {
+      &--input {
+        font-size: 1.25vw;
+        padding: 0.75vh 1.5vw;
+      }
+      &--submit {
+        font-size: 1.5vw;
+        padding: 1vh 2vw;
+      }
+    }
+    &__list {
+      &--items {
+        margin: 3vh 0;
+        li {
+        }
+      }
+    }
+    &__button {
+      &--items {
+        .clear {
+        }
+        .empty {
+          margin: 0 2vw;
+        }
+        .save {
+        }
+        button {
+          font-size: 1.5vw;
+          padding: 1vh 2vw;
+        }
+      }
+    }
+  }
+}

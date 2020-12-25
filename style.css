@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 5vw;
+  font-family: "Segoe Alt", sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container__head {
+  margin-top: 5vh;
+}
+
+.container__head h3 {
+  margin-top: 0.75vh;
+  font-weight: normal;
+  color: #8e8e8e;
+}
+
+.container__add {
+  margin-top: 2.5vh;
+}
+
+.container__add--input {
+  padding: 0.5vh 1.5vw;
+  border: 1px solid #8e8e8e;
+}
+
+.container__add--submit {
+  cursor: pointer;
+  color: white;
+  background-color: #78a2cc;
+  padding: 1vh 5vw;
+  margin-left: 1vw;
+  border-radius: 5em;
+  border: none;
+  outline: none;
+}
+
+.container__add--submit:hover {
+  transition: all 0.15s linear;
+  transform: scale(1.05);
+  box-shadow: 5px 10px 8px -2px #8e8e8e;
+}
+
+.container__add--submit:active {
+  transition: all 0.05s linear;
+  transform: scale(0.95);
+}
+
+.container__list {
+  margin: 3vh 0;
+}
+
+.container__list--items {
+  text-align: left;
+}
+
+.container__list--items li {
+  padding-left: 0.75vw;
+}
+
+.container__button--items {
+  display: flex;
+  list-style: none;
+}
+
+.container__button--items #clear {
+  background-color: #78a2cc;
+}
+
+.container__button--items #empty {
+  margin: 0 5vw;
+  background-color: #ff6961;
+}
+
+.container__button--items #save {
+  background-color: #77dd77;
+}
+
+.container__button--items button {
+  cursor: pointer;
+  color: white;
+  padding: 1vh 4.5vw;
+  border-radius: 5em;
+  border: none;
+  outline: none;
+}
+
+.container__button--items button:hover {
+  transition: all 0.15s linear;
+  transform: scale(1.05);
+  box-shadow: 5px 10px 8px -2px #8e8e8e;
+}
+
+.container__button--items button:active {
+  transition: all 0.05s linear;
+  transform: scale(0.95);
+}
+
+@media all and (min-width: 1600px) {
+  body {
+    font-size: 2vw;
+  }
+  .container__add--input {
+    font-size: 1.25vw;
+    padding: 0.75vh 1.5vw;
+  }
+  .container__add--submit {
+    font-size: 1.5vw;
+    padding: 1vh 2vw;
+  }
+  .container__list--items {
+    margin: 3vh 0;
+  }
+  .container__button--items .empty {
+    margin: 0 2vw;
+  }
+  .container__button--items button {
+    font-size: 1.5vw;
+    padding: 1vh 2vw;
+  }
+}
